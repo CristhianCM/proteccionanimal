@@ -1,0 +1,37 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  theme: {
+    extend: {
+      backgroundImage: {
+        ambiente: "url('/public/ambiente.png')",
+        correo: "url('/public/correo-electronico.png')",
+        donanteL: "url('/public/donateLarge.jpg')",
+        face: "url('/public/facebook.png')",
+        favicon: "url('/public/favicon.svg')",
+        gl_1: "url('/public/gl_1.jpg')",
+        gl_2: "url('/public/gl_2.jpg')",
+        gl_3: "url('/public/gl_3.jpg')",
+        gl_4: "url('/public/gl_4.jpg')",
+        gl_5: "url('/public/gl_5.jpg')",
+        gl_6: "url('/public/gl_6.jpg')",
+        gm_1: "url('/public/gm_1.jpg')",
+        gm_2: "url('/public/gm_2.jpg')",
+        gm_3: "url('/public/gm_3.jpg')",
+        gm_4: "url('/public/gm_4.jpg')",
+        home_1: "url('/public/home1.jpg')",
+        home_2: "url('/public/home2.jpg')",
+        info_1: "url('/public/info1.jpg')",
+        info_2: "url('/public/info2.jpg')",
+        info_3: "url('/public/info3.jpg')",
+        interaccion: "url('/public/interaccion.png')",
+        mental: "url('/public/mental.png')",
+        nutrición: "url('/public/nutrición.png')",
+        salud: "url('/public/salud.png')",
+        tiktok: "url('/public/tik-tok.png')",
+        whatsapp: "url('/public/whatsapp.png')",
+      },
+    },
+  },
+  plugins: [],
+};

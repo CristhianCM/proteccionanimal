@@ -1,0 +1,134 @@
+---
+---
+
+<header class="w-full z-50 bg-transparent fixed" id="header">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"
+    integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY="
+    crossorigin="anonymous"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    html,
+    body {
+      font-family: "Rubik", sans-serif;
+    }
+
+    /* navigation 
+ - show navigation always on the large screen devices with (min-width:1024)
+*/
+
+    @media (min-width: 1024px) {
+      .top-navbar {
+        display: inline-flex !important;
+      }
+    }
+  </style>
+
+  <nav
+    class="flex items-center bg-white bg-opacity-20 backdrop-blur-lg drop-shadow-lg p-2 flex-wrap"
+  >
+    <a
+      href="#"
+      class="p-2 inline-flex items-center lg:2xl:container lg:2xl:mx-auto lg:px-20"
+    >
+      <span class="text-xl text-white uppercase tracking-wide">PET</span>
+    </a>
+    <button
+      class="text-white inline-flex py-2 px-4 bg-transparent hover:text-white hover:border hover:border-white hover:border-transparent rounded-md lg:hidden ml-auto outline-none nav-toggler"
+      data-target="#navigation"
+    >
+      <i class="ri-function-line text-xl"></i>
+    </button>
+    <div
+      class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:gap-4 xl:container 2xl:max-w-3xl lg:2xl:mx-auto lg:w-auto lg:pr-20"
+      id="navigation"
+    >
+      <div
+        class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto"
+      >
+        <a
+          href="#"
+          class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-100 items-center justify-center hover:border hover:border-white hover:border-transparent hover:text-white"
+        >
+          <span>Inicio</span>
+        </a>
+        <a
+          href="#"
+          class="lg:inline-flex lg:w-auto lg:ml-3 w-full px-3 py-2 rounded text-gray-100 items-center justify-center hover:border hover:border-white hover:border-transparent hover:text-white"
+        >
+          <span>Información</span>
+        </a>
+        <a
+          href="#"
+          class="lg:inline-flex lg:w-auto lg:ml-3 w-full px-3 py-2 rounded text-gray-100 items-center justify-center hover:border hover:border-white hover:border-transparent hover:text-white"
+        >
+          <span>Contacto</span>
+        </a>
+        <a
+          href="#"
+          class="lg:inline-flex lg:w-auto lg:ml-3 w-full px-3 py-2 rounded text-gray-100 items-center justify-center hover:border hover:border-white hover:border-transparent hover:text-white"
+        >
+          <span>Galeria</span>
+        </a>
+        <a
+          href="#"
+          class="lg:inline-flex lg:w-auto lg:ml-3 w-full px-3 py-2 rounded text-gray-100 items-center justify-center hover:border hover:border-white hover:border-transparent hover:text-white"
+        >
+          <span>Donaciónes</span>
+        </a>
+        <a
+          href="#"
+          class="lg:inline-flex lg:w-auto lg:ml-3 w-full px-3 py-2 rounded text-zinc-100 items-center hover:border hover:border-zinc-900 hover:text-zinc-900 bg-opacity-40 backdrop-blur-lg drop-shadow-lg flex gap-2"
+        >
+          <span>Modo Oscuro</span>
+          <i class="ri-moon-line change-theme" id="theme-button"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .scroll-header {
+    /* From https://css.glass */
+    background: rgba(119, 111, 111, 0.15);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+  }
+
+  .scroll-header span,
+  .scroll-header i {
+    color: black;
+  }
+</style>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+  crossorigin="anonymous"
+></script>
+<script>
+  $(document).ready(function () {
+    $(".nav-toggler").each(function (_, navToggler) {
+      var target = $(navToggler).data("target");
+      $(navToggler).on("click", function () {
+        $(target).animate({
+          height: "toggle",
+        });
+      });
+    });
+  });
+  /*==================== CHANGE BACKGROUND HEADER ====================*/
+  function scrollHeader() {
+    const header = document.getElementById("header");
+    // When the scroll is greater than 100 viewport height, add the scroll-header class to the header tag
+    if (this.scrollY >= 100) header.classList.add("scroll-header");
+    else header.classList.remove("scroll-header");
+  }
+  window.addEventListener("scroll", scrollHeader);
+</script>

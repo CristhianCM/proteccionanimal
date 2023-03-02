@@ -1,0 +1,57 @@
+<div
+  class="swiper mySwiper xl:hidden mt-6 2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4"
+>
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img
+        class="object-cover w-full h-[36rem] rounded-md"
+        src="../../public/gm_1.jpg"
+        alt=""
+      />
+    </div>
+    <div class="swiper-slide">
+      <img
+        class="object-cover w-full h-[36rem] rounded-md"
+        src="../../public/gm_2.jpg"
+        alt=""
+      />
+    </div>
+    <div class="swiper-slide">
+      <img
+        class="object-cover w-full h-[36rem] rounded-md"
+        src="../../public/gm_3.jpg"
+        alt=""
+      />
+    </div>
+    <div class="swiper-slide">
+      <img
+        class="object-cover w-full h-[36rem] rounded-md"
+        src="../../public/gm_4.jpg"
+        alt=""
+      />
+    </div>
+  </div>
+  <div class="swiper-button-next text-white mr-5"></div>
+  <div class="swiper-button-prev text-white ml-5"></div>
+  <div class="swiper-pagination text-white"></div>
+</div>
+
+<!-- Swiper JS -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
