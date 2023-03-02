@@ -10,7 +10,7 @@ import netlify from "@astrojs/netlify/functions";
 export default defineConfig({
   integrations: [tailwind()],
   site: "https://CristhianCM.github.io",
-  base: "/ProtectA",
+  base: "/proteccionanimal",
   output: "server",
   adapter: netlify(),
 });
