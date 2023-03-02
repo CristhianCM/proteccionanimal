@@ -9,7 +9,7 @@ import netlify from "@astrojs/netlify/functions";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: "https://CristhianCM.github.io",
+  site: "https://cristhiancm.github.io",
   base: "/proteccionanimal",
   output: "server",
   adapter: netlify(),
